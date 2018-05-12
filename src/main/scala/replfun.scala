@@ -1,3 +1,5 @@
+package replfun
+
 import org.parboiled2.ParseError
 import scala.util.{ Failure, Success }
 import scala.collection.mutable.{ Map => MMap }
@@ -19,8 +21,19 @@ object replfun {
 
   val prompt: String = new AttributedStringBuilder().style(AttributedStyle.DEFAULT).append("> ").toAnsi
 
+  def process(input: String): Unit = {
+
+    val parser = new parser(input)
+    parser.Input.run() match {
+      case Failure(error: ParseError) =>
+      case Failure(error) =>
+      case Success(expr) =>
+        println(expr)
+    }
+
+  }
+
   def main(args: Array[String]): Unit = {
-    val mask: Character = null
     var running = true
 
     while (running) {
@@ -39,7 +52,7 @@ object replfun {
         if (line.equalsIgnoreCase("quit") || line.equalsIgnoreCase("exit")) {
           running = false
         } else {
-            //processLine(line)
+          process(line)
         }
       }
     }
