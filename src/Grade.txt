@@ -1,0 +1,7 @@
+1 structure creation
+0.5 field selection
+0.5 assignment to existing field
+0.5 addition of field to structure
+0 testing (failed building)
+
+Total - 2.5/5
