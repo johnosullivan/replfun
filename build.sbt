@@ -18,7 +18,7 @@ resolvers += Resolver.sonatypeRepo("snapshots")
 
 libraryDependencies ++= Seq(
   "org.parboiled"  %% "parboiled"             % "2.1.4",
-  "org.jline"          %  "jline"                 % "3.0.1",
+  "org.jline"          %  "jline"             % "3.5.1",
   "org.scalaz"     %% "scalaz-core"           % "7.2.21",
   "com.slamdata"   %% "matryoshka-core"       % "0.21.3",
   "org.scalatest"  %% "scalatest"             % "3.0.5"   % Test,
